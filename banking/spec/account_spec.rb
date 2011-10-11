@@ -16,4 +16,26 @@ describe Account do
     subject.balance.should == starting_balance
   end
 
+
+
+
+
+  it "should add value to the balance" do
+
+    starting_balance = 60.35
+    deposit = 34.54
+
+    account1 = Account.new(starting_balance)
+    account1.deposit_amount(deposit)
+    account1.balance.should == starting_balance + deposit
+
+
+
+
+  end
+
+
+
+
+
 end
