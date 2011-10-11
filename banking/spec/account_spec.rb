@@ -35,6 +35,35 @@ describe Account do
   end
 
 
+  it "should transfer balance from account 1 to account 2"  do
+
+       starting_balance1 = 200.0
+
+       value = 100.00
+
+       starting_balance2 = 200.35
+
+
+
+       account1 = Account.new(starting_balance1)
+       account2 = Account.new(starting_balance2)
+
+
+
+
+       account1.transfer(account2,value)
+
+       # don't make this mistake account1.balance.should == account1.balance-value cuz it's already been transfered
+       account1.balance.should == starting_balance1 - value
+       account2.balance.should == starting_balance2+value
+
+
+
+
+
+
+  end
+
 
 
 

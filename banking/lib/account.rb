@@ -15,5 +15,14 @@ class Account
   end
 
 
+  def transfer (account, value)
+
+    #@balance will return the current balance cuz it's an instance variable
+    @balance = @balance-value
+
+    account.deposit_amount(value)
+
+  end
+
 
 end
